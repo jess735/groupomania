@@ -97,6 +97,7 @@ export default {
     ...mapState(["user"])
   },
   methods: {
+    //fonction pour supprimer le compte
     deleteAccount() {
       axios
         .delete("http://localhost:3000/api/user/delete", {
@@ -114,6 +115,8 @@ export default {
           
         .catch(error => console.log(error));
     },
+
+    // fonction pour changer le mot de passe
     changePassword() {
       //Controle de la saisie du nouveau password
       //Controle de repeat et non null
@@ -152,6 +155,7 @@ export default {
         this.retourAPI = "Les mots de passe ne sont pas identiques ou ne respectent pas les conditions requises";
       }
     },
+    // fonction pour tester les saisies de l'user dasn les inputs
     testInputs() {
       //6 caractères dont au minimum une majuscule, une minuscule et un chiffre
       const regexPassword = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})/;
@@ -178,6 +182,7 @@ export default {
       });
     }
   },
+  // modifications seront effectuées lorsque la requête sera faite
   mounted() {
     this.$store.dispatch("getUserInfos");
   }

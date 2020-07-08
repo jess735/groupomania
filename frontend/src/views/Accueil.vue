@@ -1,15 +1,13 @@
 <template>
 
-<body>
-  <div>
-    <h1 class="display-3">
-      Bienvenue sur le nouveau réseaux social de Groupomania
-    </h1>
-  </div>
-    
-</body>
+    <body>
+        <div>
+           <h1 class="display-3">
+             Bienvenue sur le nouveau réseaux social de Groupomania
+           </h1>
+        </div>
 
-
+    </body>
 
 </template>
 
@@ -18,7 +16,6 @@
 
 export default {
   name: "Accueil"
-    
 }  
 
 </script>

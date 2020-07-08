@@ -75,6 +75,7 @@ export default {
           .catch(error => (this.msgError = error));
       }
     },
+    //fonction pour télécharger et faire apparaitre l'image téléchargé dans la création de post
     onFileChange(e) {
        console.log(e);
          this.contentPost.postImage = e.target.files[0] || e.dataTransfer.files;

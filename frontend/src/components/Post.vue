@@ -35,7 +35,7 @@
 </template>
 
 <script>
-// import d'axios pour les requêtes
+// import de la bibliothèque vuex
 import { mapState } from "vuex";
 
 export default {
@@ -54,6 +54,7 @@ export default {
     }
   },
   methods: {
+    //création de fonction pour modifier ou supprimer le post
     emitInfoPost() {
       this.$emit("infosPost", { post: this.post });
     },

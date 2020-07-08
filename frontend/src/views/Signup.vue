@@ -23,6 +23,7 @@
 </template>
 
 <script>
+//import de la bibliothèque et d'axios pour les requêtes
 import { mapState } from "vuex";
 import axios from "axios";
 
@@ -42,6 +43,7 @@ export default {
     ...mapState(["user"])
   },
   methods: {
+    // requête pour créer un user, sécurité grâce au regex
     sendSignup() {
       const regexPassword = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})/;
       const regexEmail = /^[a-z0-9._-]+@[a-z0-9.-]{2,}[.][a-z]{2,3}$/;
@@ -55,7 +57,7 @@ export default {
           .then(response => {
             console.log(response);
             this.$router.push({ path: 'Wall' })
-            //Réinitialisation
+            //Réinitialisation des champs après saisie
             this.dataSignup.email = null;
             this.dataSignup.username = null;
             this.dataSignup.password = null;
