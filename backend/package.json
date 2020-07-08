@@ -21,7 +21,7 @@
     "multer": "^1.4.2",
     "mysql": "github:mysqljs/mysql",
     "mysql2": "^2.1.0",
-    "sequelize": "^3.35.1",
+    "sequelize": "^5.15.1",
     "vue-axios": "^2.1.5"
   }
 }
