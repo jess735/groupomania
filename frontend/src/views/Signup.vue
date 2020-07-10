@@ -14,6 +14,7 @@
         <div class="form-group">
           <label for="inputPassword">🔒 Votre mot de passe</label>
           <input  type="password" class="form-control" id="inputPassword" v-model="dataSignup.password"/>
+          <small>Votre mot de passe doit contenir au moins 6 caractères dont 1 majuscule, 1 minuscule et un chiffre</small>
         </div>
         <button @click.prevent="sendSignup" type="submit" class="btn btn-danger mb-3 mt-3">Créer mon compte 👌</button>
       </div>
@@ -26,6 +27,7 @@
 //import de la bibliothèque et d'axios pour les requêtes
 import { mapState } from "vuex";
 import axios from "axios";
+
 
 export default {
   name: "SignUp",

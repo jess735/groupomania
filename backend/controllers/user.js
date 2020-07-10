@@ -46,7 +46,7 @@ exports.signup = (req, res) => {
                     })
                 }
                 else {
-                    res.status(409).json({ error: 'Cette utilisateur existe déjà ' })
+                    res.status(409).json({ error: 'Cette utilisateur existe déjà' })
                 }
             })
             .catch(err => { res.status(500).json({ err }) })
@@ -100,7 +100,7 @@ exports.userProfil = (req, res) => {
 
 //modification d'un profil
 exports.changePwd = (req, res) => {
-    //TO DO:
+    
     //Récupère l'id de l'user et le nouveau password
     let userId = utils.getUserId(req.headers.authorization);
     const newPassword = req.body.newPassword;

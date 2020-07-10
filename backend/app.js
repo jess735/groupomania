@@ -1,6 +1,7 @@
 //Import
 const express = require('express');
 const bodyParser = require('body-parser');
+const helmet = require('helmet'); /* Importation d'helmet, pour les failles xss  */
 
 const userRoutes = require('./routes/user.js');
 const postRoutes = require('./routes/post.js');
@@ -19,10 +20,15 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
   next();
 });
+// Utilisation d'helmet
+app.use(helmet());
 
 //Parser les corps des requête + forcer parse d'objets inclus dans d'autres objets
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+
+
 
 //Middleware
 app.use('/images', express.static(path.join(__dirname, 'images')));

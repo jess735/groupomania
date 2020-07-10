@@ -5,7 +5,7 @@ module.exports = {
         return regexEmail.test(value)
     },
     validPassword: function (value) {
-        //6 caractères dont au minimum une majuscule, une minuscule, un caractère numérique
+        //6 caractères dont au minimum une majuscule, une minuscule et un caractère numérique
         const regexPassword = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})/
         return regexPassword.test(value)
     },

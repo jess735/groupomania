@@ -3,7 +3,7 @@
     <body>
         <div>
            <h1 class="display-3">
-             Bienvenue sur le nouveau réseaux social de Groupomania
+             Bienvenue sur le nouveau réseau social de Groupomania
            </h1>
         </div>
 
